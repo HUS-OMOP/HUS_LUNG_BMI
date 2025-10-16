@@ -18,7 +18,7 @@ conn_str = (
     f"DATABASE={database};"
     f"UID={username};"
     f"PWD={password};"
-    f"Authentication=ActiveDirectoryPassword;"
+    f"Authentication=ActiveDirectoryPassword;" #Remove in not Microsoft Authentication
 )
 
 # === 2. Connect via ODBC ===
