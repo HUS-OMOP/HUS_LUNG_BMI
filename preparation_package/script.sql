@@ -5,7 +5,7 @@ WITH concept_counts AS (
     SELECT 'condition_occurrence' AS table_name,
            condition_concept_id AS concept_id,
            COUNT(*) AS row_count
-      FROM condition_occurrence
+      FROM {schema}.condition_occurrence
      WHERE condition_concept_id <> 0
      GROUP BY condition_concept_id
 
@@ -14,7 +14,7 @@ WITH concept_counts AS (
     SELECT 'drug_exposure' AS table_name,
            drug_concept_id AS concept_id,
            COUNT(*) AS row_count
-      FROM drug_exposure
+      FROM {schema}.drug_exposure
      WHERE drug_concept_id <> 0
      GROUP BY drug_concept_id
 
@@ -23,7 +23,7 @@ WITH concept_counts AS (
     SELECT 'procedure_occurrence' AS table_name,
            procedure_concept_id AS concept_id,
            COUNT(*) AS row_count
-      FROM procedure_occurrence
+      FROM {schema}.procedure_occurrence
      WHERE procedure_concept_id <> 0
      GROUP BY procedure_concept_id
 
@@ -32,7 +32,7 @@ WITH concept_counts AS (
     SELECT 'measurement' AS table_name,
            measurement_concept_id AS concept_id,
            COUNT(*) AS row_count
-      FROM measurement
+      FROM {schema}.measurement
      WHERE measurement_concept_id <> 0
      GROUP BY measurement_concept_id
 
@@ -41,7 +41,7 @@ WITH concept_counts AS (
     SELECT 'observation' AS table_name,
            observation_concept_id AS concept_id,
            COUNT(*) AS row_count
-      FROM observation
+      FROM {schema}.observation
      WHERE observation_concept_id <> 0
      GROUP BY observation_concept_id
 )
@@ -52,6 +52,6 @@ SELECT c.table_name,
        co.vocabulary_id,
        c.row_count
   FROM concept_counts c
-  LEFT JOIN concept co
+  LEFT JOIN {schema}.concept co
     ON c.concept_id = co.concept_id
  ORDER BY c.table_name, c.row_count DESC;
