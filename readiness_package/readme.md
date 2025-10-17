@@ -1,17 +1,18 @@
 # 🧠 OMOP Concept Usage Summary
 
-This package runs an SQL script against an OMOP Common Data Model (CDM) database to summarize **concept usage frequency** across major clinical tables (conditions, drugs, procedures, measurements, observations).
-The result is exported as a CSV file for easy analysis.
+This python package runs a SQL script against an OMOP Common Data Model (CDM) database to summarize **concept usage frequency** across major clinical tables (conditions, drugs, procedures, measurements, observations).
+
+The results are generated in a CSV file, which does not contain any patient information.
 
 ---
 
 ## What to do?
 
-1. If you do not have ODBC driver please see Installing ODBC Driver 18 for SQL Server
-2. Open run.py and add your DB parameters
+1. Check below for dependencies
+2. Open `run.py` and add your DB parameters
 3. Navigate into the folder on your terminal
-4. Run the code (and install packages before ) - see Running the Code
-5. Zip the content of results folder and send our way :)
+4. Run the code - see Running the Code
+5. Zip the content of results folder and email the zip-file to alexey.ryzhenkov@helsinki.fi 
 
 ## 🚀 Running the Code
 
@@ -35,13 +36,13 @@ python run.py
 
 ---
 
-## ⚙️ Prerequisites
+## ⚙️ Dependencies
 
 Before running the Python scripts, make sure you have:
 
 * Python **3.8+**
 * An available **ODBC connection** to your database
-* The **Microsoft ODBC Driver 18 for SQL Server** (if you’re connecting to SQL Server)
+* If your OMOP instance is running on Microsoft SQL Server and you do not have the ODBC driver installed please see "Installing ODBC Driver 18 for SQL Server" below
 
 ---
 
@@ -92,7 +93,7 @@ For other distros (RHEL, CentOS, etc.), see:
 
 ## 🧾 Output
 
-After successful execution, you’ll get:
+After successful execution, the script will generate an output file:
 
 ```
 concept_usage_summary.csv

@@ -1,0 +1,60 @@
+TITLE: Utilizing OMOP-Harmonised Automatically Extracted Hospital Network-Wide EHR Data to Detect Association Between Obesity and Sex-related Survival Difference in Lung Cancer
+
+Dear Dr. Ryzhenkov,
+
+Thank you for your submission to JCO Clinical Cancer Informatics. Please read this message in its entirety, as it contains important instructions below the reviewer comments for resubmitting your manuscript.
+
+Your manuscript was sent for external peer review, and the editors have also read it. Although the readers agreed that the manuscript contained information of potential importance, a number of major issues were raised. If you believe that you can address these issues, we would be willing to consider a revised manuscript; however, we cannot guarantee acceptance, particularly if you cannot adequately address the concerns. Given the major issues raised, external peer review of your revised manuscript will typically be required.
+
+Please see below for reviewers' comments and for information about submitting a revised manuscript. Your revision is due by Nov 12, 2025. If you have specific concerns that you would like to address with me before you resubmit, please contact the editorial office at jcocci@asco.org.
+
+Sincerely,
+
+Paul Martin Putora, MD, MA, PhD
+Associate Editor
+JCO Clinical Cancer Informatics
+
+ 
+
+
+Reviewer comments:
+
+Reviewer 1:
+
+This manuscript addresses the role of BMI in modulating sex-related survival differences in lung cancer. It leverages a large-scale, OMOP-harmonized EHR dataset, and the findings suggesting that BMI reduces survival disparity between males and females are clinically intriguing with potential implications for clinical trial design and registry reporting. However, despite these strengths, the manuscript has major limitations that preclude publication in JCO Clinical Cancer Informatics.
+
+Major Concerns
+- The study relies entirely on data from a single Finnish hospital network. This severely limits external validity. Unmeasured confounders such as socioeconomic status, lifestyle factors, and physical activity (which are not captured in this dataset) are likely to substantially influence both BMI and survival, making causal inference problematic.
+
+- While the clinical findings may be of interest to oncology or outcomes-focused journals, the methodological contribution is limited. JCO CCI emphasizes advances in biomedical informatics methods and analytics. This manuscript primarily reports a single-site observational study with standard survival models, without introducing new informatics techniques or methodological frameworks.
+
+- The survival follow-up cutoff at January 2025 risks immortal time bias for recently diagnosed patients if not explicitly adjusted.
+
+- The manuscript does not provide the distribution of BMI or survival outcomes, nor does it include any analysis of potential outliers. Given the known influence of extreme values on survival analyses, this omission raises concerns that the reported associations may be overly sensitive to outlier effects.
+
+ 
+
+Reviewer 2:
+
+This is an interesting assessment of a real-world large cohort of patients from Helsinki University Central Hospital in which the investigators assessed differences in outcomes for lung cancer according to sex and BMI. While it has long been reported than women have better survival than men and that patients with higher BMIs have better survival than patients with lower BMIs in lung cancer, mechanistic understanding of this effect is lacking, and rigorous assessment with multivariate analysis has previously often been restricted to subsets of patients. As such, with such a large dataset that provides more granular patient data than traditional registry studies, and with robust statistical analysis, this paper does add nicely to the literature and should be well received by readers. First, however, several issues should be addressed.
+
+Abstract
+1. In the first sentence, "is a recurring highlight in the treatment efficacy evaluation reviews" does not make a lot of sense, and this sentence (and really the whole impetus for this project) should be reworded and reframed.
+2. In the Conclusions, "underlying the need" is not correctly used.
+
+Introduction
+1. In the first paragraph, "…have been noted already in the end" needs to be rewritten. There are many, many instances of such grammar issues or sentences that do not make sense, and I strongly recommend a native speaker review and edit the whole manuscript.
+
+Methods
+1. Excluding prior cancers could bias results given it is known that obesity is associated with the development of other non-lung malignancies. This was a very large exclusion of approximately 2,000 patients and over 25% of the entire patient population. The authors should better provide justification for this exclusion and discussion in the Discussion section of how this could introduce bias in their analysis. I would also encourage the authors to report the data without this exclusion as well.
+2. The definition of statistical significance should be defined a priori (i.e., p <0.05).
+3. Mention that IRB/regulatory approval was obtained for this analysis is missing.
+
+Results
+1. It is interesting that adenocarcinoma was nearly 3 times more common than squamous cell, which is not the expected proportion. The authors should comment on this and its potential result implication in the Discussion section.
+2. Women being significantly more likely to be diagnosed at an earlier stage and also more likely to be never smokers is very important and perhaps should be highlighted in the Abstract.
+3. In the "Comparison of clinical features…" section, it is likely true that women received surgery more often because they were earlier stage at diagnosis, but this would not also apply to receiving targeted therapy more often (this instead is most likely because they had more actionable mutation rates across stages).
+4. In the table in the "Comparison of clinical features…" section, I wonder if it would be more rigorous to have p-values for each comparison (i.e., within stage, histology, etc.).
+
+Figures
+1. I would recommend the CONSORT flow diagram be included in the primary manuscript, not as a supplement.
